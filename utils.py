@@ -1,10 +1,9 @@
 import os
 import re
-import platform
 
 
 def clear_screen():
-  command = 'cls' if platform.system() == 'Windows' else 'clear'
+  command = 'cls' if os.name == 'nt' else 'clear'
   os.system(command)
 
 
